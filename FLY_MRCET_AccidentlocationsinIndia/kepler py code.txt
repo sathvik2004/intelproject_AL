@@ -1,0 +1,9 @@
+import keplergl
+import pandas as pd
+from keplergl import KeplerGl
+map_1 = KeplerGl(height=600)
+
+data = pd.read_csv(r"C:\Users\pc\OneDrive\Desktop\INTEL PROJECT\intelproject.csv")//path here
+
+map_1.add_data(data, name='md')
+map_1.save_to_html(file_name='keplergl_map.html')
